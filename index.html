@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080710">
+<title>শুভ জন্মদিন, সাগর! ✨</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#080710;--bg2:#100d1d;--gold:#f5cf78;
+  --gold2:#b88a3e;--white:#fff8e9;--muted:#c8bdd0;
+  --card:rgba(255,255,255,.055);
+  --border:rgba(245,207,120,.22);--pink:#e8a5c7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  font-family:'Hind Siliguri',sans-serif;color:var(--white);
+  background:radial-gradient(ellipse at 20% 10%,rgba(82,48,122,.23),transparent 45%),
+  radial-gradient(ellipse at 85% 70%,rgba(129,83,35,.13),transparent 40%),var(--bg);
+  overflow-x:hidden;
+}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+a{color:inherit;text-decoration:none}
+.hidden{display:none!important}
+.container{width:min(1080px,92%);margin:auto}
+.gold{color:var(--gold)}.muted{color:var(--muted)}.center{text-align:center}
+.section{padding:90px 0;position:relative}
+.section-title{
+  font-family:'Noto Serif Bengali',serif;
+  font-size:clamp(27px,5vw,42px);color:var(--gold);
+  text-align:center;margin-bottom:12px;
+}
+.section-subtitle{text-align:center;color:var(--muted);margin-bottom:38px;font-size:15px}
+.eyebrow{color:var(--gold);letter-spacing:2px;font-size:12px;margin-bottom:14px}
+.btn{
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg,#f5cf78,#b88a3e);
+  color:#17101a;padding:12px 25px;border-radius:50px;
+  font-weight:700;transition:.25s;display:inline-flex;
+  align-items:center;justify-content:center;gap:8px;
+  box-shadow:0 5px 20px #e9b95518;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #e9b95535}
+.btn-outline{background:transparent;color:var(--gold)}
+.btn-small{padding:8px 17px;font-size:14px}
+.card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:22px;padding:25px;backdrop-filter:blur(12px);
+}
+hr{border:0;border-top:1px solid var(--border);margin:25px 0}
+
+/* Progress */
+#scrollProgress{
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:linear-gradient(90deg,#b88a3e,#fff0b0,#f5cf78);
+  z-index:9999;box-shadow:0 0 12px var(--gold);
+}
+
+/* Background */
+#starfield{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.star{
+  position:absolute;width:2px;height:2px;border-radius:50%;
+  background:#fff6d7;opacity:.6;animation:twinkle 3s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.12;transform:scale(.5)}}
+.floating-particle{
+  position:fixed;bottom:-25px;pointer-events:none;z-index:2;
+  color:var(--gold);text-shadow:0 0 12px var(--gold);
+  animation:floatUp linear forwards;
+}
+@keyframes floatUp{
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+/* Navigation */
+.nav{
+  position:sticky;top:0;z-index:50;background:rgba(8,7,16,.88);
+  border-bottom:1px solid rgba(245,207,120,.12);backdrop-filter:blur(16px);
+}
+.nav-inner{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:700;color:var(--gold);font-size:17px}
+.nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--gold)}
+@media(max-width:700px){
+  .nav-inner{padding:12px 0;align-items:flex-start;flex-direction:column}
+  .nav-links{gap:12px}.nav-links a{font-size:12px}
+}
+
+/* Welcome */
+#welcome{
+  min-height:100svh;display:grid;place-items:center;text-align:center;
+  padding:45px 20px;position:relative;overflow:hidden;
+}
+.welcome-box{max-width:720px;position:relative;z-index:2;animation:welcomeIn 1s ease both}
+@keyframes welcomeIn{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}
+.welcome-symbol{font-size:62px;margin-bottom:22px;filter:drop-shadow(0 0 25px #f5cf7860);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-13px)}}
+.welcome-title{
+  font-family:'Noto Serif Bengali',serif;font-size:clamp(34px,7vw,68px);
+  line-height:1.3;color:var(--gold);margin-bottom:18px;
+}
+.welcome-desc{font-size:17px;color:var(--muted);line-height:1.9;margin-bottom:30px}
+.welcome-photo{
+  width:125px;height:125px;border-radius:50%;object-fit:cover;
+  border:3px solid var(--gold);margin:0 auto 22px;
+  box-shadow:0 0 35px #f5cf7830;
+}
+
+/* Hero */
+.hero{min-height:75vh;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;overflow:hidden}
+.hero-content{position:relative;z-index:2;max-width:850px}
+.hero h1{
+  font-family:'Noto Serif Bengali',serif;font-size:clamp(35px,7vw,76px);
+  line-height:1.35;color:var(--gold);text-shadow:0 0 40px #e6b95a30;
+}
+.hero p{font-size:17px;color:var(--muted);margin:18px auto 28px;line-height:1.9}
+.hero-photo{width:145px;height:145px;object-fit:cover;border-radius:50%;border:3px solid var(--gold);margin-bottom:22px;box-shadow:0 0 45px #e8b84b30}
+.hero-glow{position:absolute;width:400px;height:400px;border-radius:50%;background:#b78b4820;filter:blur(80px);pointer-events:none}
+
+/* Countdown */
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:650px;margin:30px auto}
+.time-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 8px}
+.time-number{display:block;font-size:clamp(30px,6vw,48px);font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
+.time-label{font-size:13px;color:var(--muted)}
+.countdown-note{color:var(--muted);text-align:center}
+@media(max-width:480px){.countdown-grid{gap:7px}.time-box{padding:15px 4px}}
+
+/* Celebration */
+.celebration-banner{
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,#f5cf7810,#9c6bc21a);
+  padding:35px 20px;border-radius:26px;text-align:center;
+}
+.celebration-banner .big-emoji{font-size:50px}
+.celebration-banner h2{
+  font-family:'Noto Serif Bengali',serif;color:var(--gold);
+  font-size:clamp(27px,5vw,44px);margin:15px 0;
+}
+
+/* Cake */
+.cake-area{min-height:330px;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;overflow:hidden}
+.cake{position:relative;width:230px;height:190px;margin-top:60px}
+.cake-top{position:absolute;top:48px;left:15px;width:200px;height:50px;border-radius:50%;background:#f5c8d6;border:4px solid #e7a9bd;z-index:3}
+.cake-body{position:absolute;top:68px;left:15px;width:200px;height:105px;background:linear-gradient(90deg,#a65d4d,#e4a16e,#a65d4d);border-radius:0 0 20px 20px;border-bottom:7px solid #7f403c;z-index:2}
+.cake-icing{position:absolute;top:78px;left:15px;width:200px;height:25px;z-index:4;background:#ffe2d5;border-radius:0 0 50% 50%;clip-path:polygon(0 0,100% 0,100% 65%,90% 100%,80% 60%,70% 100%,60% 60%,50% 100%,40% 60%,30% 100%,20% 60%,10% 100%,0 65%)}
+.cake-plate{position:absolute;bottom:0;left:0;width:230px;height:16px;background:linear-gradient(#e9d9bb,#a88a5c);border-radius:50%;z-index:5}
+.candle{position:absolute;z-index:6;top:4px;width:12px;height:49px;border-radius:4px;background:repeating-linear-gradient(45deg,#fff4d0 0 5px,#dba74f 5px 9px)}
+.candle:nth-child(1){left:62px}.candle:nth-child(2){left:108px}.candle:nth-child(3){left:154px}
+.flame{position:absolute;top:-19px;left:1px;width:10px;height:17px;background:radial-gradient(ellipse at 50% 70%,#fff 0 15%,#ffdd63 40%,#ff7b24 75%);border-radius:50% 50% 45% 45%;animation:flicker .4s infinite alternate;transform-origin:bottom}
+@keyframes flicker{to{transform:rotate(8deg) scale(.85)}}
+.smoke{position:absolute;top:-35px;left:2px;width:12px;height:22px;border-radius:50%;border-left:3px solid #bbb;opacity:0;transform:translateY(0)}
+.blown .flame{display:none}.blown .smoke{opacity:.6;animation:smoke 1.5s ease-out forwards}
+@keyframes smoke{to{transform:translate(-8px,-35px) scale(1.8);opacity:0}}
+.cake-message{color:var(--muted);margin:20px 0}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.gallery-item{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--card);cursor:pointer;transition:.3s}
+.gallery-item:hover{transform:translateY(-6px) scale(1.015);border-color:var(--gold);box-shadow:0 15px 35px #0006}
+.gallery-item img{width:100%;height:230px;object-fit:cover;display:block}
+.gallery-caption{padding:12px;color:var(--muted);text-align:center}
+.gallery-tools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+.lightbox{position:fixed;inset:0;background:#000e;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex}
+.lightbox img{max-width:95%;max-height:80vh;border-radius:15px;object-fit:contain}
+.lightbox-close{position:absolute;top:20px;right:25px;background:none;border:0;color:white;font-size:35px}
+
+/* Letter */
+.envelope{max-width:650px;margin:auto;text-align:center;padding:35px 20px}
+.envelope-icon{font-size:85px;display:block;margin-bottom:15px}
+.letter-paper{display:none;text-align:left;max-width:700px;margin:25px auto 0;padding:30px;color:#382b26;background:#fff3d9;border-radius:8px;box-shadow:0 15px 60px #0008;white-space:pre-wrap;line-height:2;font-size:16px}
+.letter-paper.open{display:block;animation:openLetter .6s ease}
+@keyframes openLetter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* Reasons */
+.reasons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.reason-card{min-height:130px;display:grid;place-items:center;text-align:center;padding:22px;border-radius:18px;border:1px solid var(--border);background:linear-gradient(145deg,#ffffff0b,#d7a44a0a);transition:.3s}
+.reason-card:hover{transform:translateY(-5px);background:#f5cf7812}
+.reason-card .reason-number{font-size:24px;color:var(--gold);margin-bottom:10px}
+.reason-card p{color:var(--muted);line-height:1.7}
+
+/* Gift */
+.gift-box{max-width:650px;margin:auto;text-align:center;padding:30px}
+.gift-emoji{font-size:90px;display:block;cursor:pointer;transition:.3s;user-select:none}
+.gift-emoji:hover{transform:scale(1.1) rotate(-5deg)}
+.gift-content{display:none;margin-top:22px;color:var(--gold);font-size:20px;line-height:1.9}
+.gift-content.show{display:block;animation:openLetter .6s}
+.gift-image{max-width:100%;max-height:350px;object-fit:contain;border-radius:15px;margin-top:20px}
+
+/* Quiz */
+.quiz-box{max-width:650px;margin:auto}
+.quiz-question{font-size:21px;color:var(--gold);margin-bottom:20px}
+.quiz-options{display:grid;gap:10px}
+.quiz-option{background:#ffffff0a;color:var(--white);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:left;transition:.2s}
+.quiz-option:hover:not(:disabled){background:#f5cf7818;border-color:var(--gold)}
+.quiz-option:disabled{opacity:.8;cursor:default}
+.quiz-feedback{margin-top:18px;min-height:30px;color:var(--gold)}
+.quiz-progress{color:var(--muted);font-size:13px;margin-bottom:15px}
+
+/* Media */
+.media-player{max-width:550px;margin:auto;text-align:center}
+.media-player audio,.media-player video{width:100%;margin-top:15px}
+.media-icon{font-size:45px;margin-bottom:12px}
+
+/* Wishes */
+.wish-box{max-width:650px;margin:30px auto 0;text-align:center}
+.wish-box textarea{
+  width:100%;min-height:110px;margin:15px 0;padding:15px;
+  border:1px solid var(--border);border-radius:14px;
+  background:#ffffff09;color:var(--white);font:inherit;resize:vertical;
+}
+.wish-result{color:var(--gold);line-height:1.8;margin:18px 0;white-space:pre-wrap}
+
+/* Surprise modal */
+.modal{
+  position:fixed;inset:0;z-index:150;background:#05030beF;
+  display:none;place-items:center;padding:20px;
+}
+.modal.show{display:grid}
+.modal-card{
+  width:min(500px,100%);padding:35px 25px;text-align:center;
+  border:1px solid var(--gold);border-radius:25px;
+  background:linear-gradient(145deg,#21182c,#100d1d);
+  box-shadow:0 0 70px #f5cf7822;animation:openLetter .5s ease;
+}
+.modal-card h2{color:var(--gold);font-family:'Noto Serif Bengali',serif;margin:15px 0}
+.modal-emoji{font-size:65px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Footer */
+footer{text-align:center;padding:40px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+footer span{color:var(--gold)}
+
+/* Effects */
+#fxCanvas{position:fixed;inset:0;pointer-events:none;z-index:80;width:100%;height:100%}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#211b2b;border:1px solid var(--border);padding:12px 20px;border-radius:30px;color:var(--gold);z-index:200;opacity:0;pointer-events:none;transition:.3s;max-width:90%;text-align:center}
+.toast.show{opacity:1}
+.fade-in{animation:fadeIn 1s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<div id="scrollProgress"></div>
+<div id="starfield"></div>
+<canvas id="fxCanvas"></canvas>
+<div class="toast" id="toast" role="status"></div>
+
+<!-- Welcome -->
+<section id="welcome">
+  <div class="welcome-box">
+    <img id="welcomePhoto" class="welcome-photo hidden" alt="বন্ধুর ছবি">
+    <div class="welcome-symbol">🌙✨</div>
+    <div class="eyebrow">A SPECIAL DAY IS WAITING</div>
+    <h1 class="welcome-title">একটি বিশেষ মুহূর্ত<br>তোর জন্য...</h1>
+    <p class="welcome-desc">
+      কিছু মানুষ জীবনে আসে, আর সাধারণ দিনগুলোকে অসাধারণ করে তোলে।
+      আজকের এই আয়োজন তেমনই একজন মানুষের জন্য।
+    </p>
+    <button class="btn" id="enterBtn">দরজা খুলে দেখ ✨</button>
+  </div>
+</section>
+
+<!-- Main experience -->
+<div id="mainExperience" class="hidden">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">✦ জন্মদিনের আয়োজন</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#countdown" data-nav="countdown">কাউন্টডাউন</a>
+        <a href="#celebration" data-nav="celebration">উদ্‌যাপন</a>
+        <a href="#cakeSection" data-nav="cake">কেক</a>
+        <a href="#gallerySection" data-nav="gallery">স্মৃতি</a>
+        <a href="#letterSection" data-nav="letter">চিঠি</a>
+        <a href="#giftSection" data-nav="gift">উপহার</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="section" id="countdown">
+      <div class="container center">
+        <div class="eyebrow">THE BIG DAY IS COMING</div>
+        <h2 class="section-title">অপেক্ষার শেষ হতে আর কতক্ষণ? ⏳</h2>
+        <p class="section-subtitle">নতুন একটি বছর, নতুন কিছু স্বপ্ন আর অনেক আনন্দের অপেক্ষা।</p>
+        <div class="countdown-grid" id="countdownGrid">
+          <div class="time-box"><span class="time-number" id="days">00</span><span class="time-label">দিন</span></div>
+          <div class="time-box"><span class="time-number" id="hours">00</span><span class="time-label">ঘণ্টা</span></div>
+          <div class="time-box"><span class="time-number" id="minutes">00</span><span class="time-label">মিনিট</span></div>
+          <div class="time-box"><span class="time-number" id="seconds">00</span><span class="time-label">সেকেন্ড</span></div>
+        </div>
+        <p class="countdown-note" id="countdownNote">সময় গুনছি তোর বিশেষ দিনের জন্য...</p>
+      </div>
+    </section>
+
+    <section class="section hidden" id="celebration">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-glow"></div>
+          <div class="hero-content">
+            <img id="heroPhoto" class="hero-photo hidden" alt="জন্মদিনের বিশেষ ছবি">
+            <div class="eyebrow">TODAY IS YOUR DAY</div>
+            <h1 id="heroTitle">শুভ জন্মদিন! 🎂</h1>
+            <p id="heroMessage">তোর জীবনের প্রতিটি দিন হোক সুন্দর, আনন্দময় ও স্বপ্নপূরণের।</p>
+            <button class="btn" onclick="launchFireworks()">আনন্দ শুরু হোক! 🎆</button>
+          </div>
+        </div>
+        <div class="celebration-banner">
+          <div class="big-emoji">🥳🎉🎂</div>
+          <h2>আজ শুধু তোর দিন!</h2>
+          <p class="muted">হাসি, আনন্দ, ভালোবাসা আর অসংখ্য সুন্দর মুহূর্তে ভরে উঠুক তোর জীবন।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="cakeSection">
+      <div class="container">
+        <h2 class="section-title">এবার কেক কাটার পালা! 🎂</h2>
+        <p class="section-subtitle">চোখ বন্ধ করে একটা ইচ্ছা কর, তারপর মোমবাতিগুলো নিভিয়ে দাও।</p>
+        <div class="card center">
+          <div class="cake-area">
+            <div class="cake" id="cake">
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+              <div class="cake-top"></div><div class="cake-body"></div>
+              <div class="cake-icing"></div><div class="cake-plate"></div>
+            </div>
+          </div>
+          <p class="cake-message" id="cakeMessage">তোর সব সুন্দর ইচ্ছা পূরণ হোক। 💛</p>
+          <button class="btn" id="blowBtn">মোমবাতি নিভিয়ে দাও 🕯️</button>
+          <button class="btn btn-outline btn-small hidden" id="relightBtn">আবার জ্বালাও</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="gallerySection">
+      <div class="container">
+        <h2 class="section-title">আমাদের কিছু স্মৃতি 📸</h2>
+        <p class="section-subtitle">ছোট ছোট মুহূর্তগুলোই একদিন সবচেয়ে সুন্দর স্মৃতি হয়ে থাকে।</p>
+        <div class="gallery-tools">
+          <button class="btn btn-outline btn-small" id="slideshowBtn">▶ স্লাইডশো চালু করো</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="letterSection">
+      <div class="container">
+        <h2 class="section-title">তোর জন্য একটি চিঠি 💌</h2>
+        <p class="section-subtitle">কিছু কথা আছে, যা সরাসরি বলা হয়তো হয়ে ওঠে না...</p>
+        <div class="card envelope">
+          <span class="envelope-icon">💌</span>
+          <p class="muted">এই চিঠিটা শুধু তোর জন্য।</p><br>
+          <button class="btn" id="openLetterBtn">চিঠি খুলে পড়</button>
+          <div class="letter-paper" id="letterPaper"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="reasonsSection">
+      <div class="container">
+        <h2 class="section-title">তুমি কেন এত স্পেশাল? ⭐</h2>
+        <p class="section-subtitle">তোমার কিছু গুণ, যেগুলো তোমাকে আলাদা করে তোলে।</p>
+        <div class="reasons-grid" id="reasonsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="quizSection">
+      <div class="container">
+        <h2 class="section-title">আমাদের বন্ধুত্বের ছোট্ট কুইজ 😄</h2>
+        <p class="section-subtitle">দেখি, কতটা ঠিক উত্তর দিতে পারো!</p>
+        <div class="card quiz-box">
+          <div class="quiz-progress" id="quizProgress"></div>
+          <div class="quiz-question" id="quizQuestion"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+          <button class="btn btn-small hidden" id="nextQuestionBtn">পরের প্রশ্ন →</button>
+          <div class="hidden center" id="quizResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="giftSection">
+      <div class="container">
+        <h2 class="section-title">তোর জন্য ছোট্ট একটা উপহার 🎁</h2>
+        <p class="section-subtitle">উপহারটা খুলে দেখো।</p>
+        <div class="card gift-box">
+          <span class="gift-emoji" id="giftEmoji" role="button" tabindex="0" aria-label="উপহার খুলুন">🎁</span>
+          <p class="muted">খুলতে উপহারের বাক্সে ক্লিক কর</p>
+          <div class="gift-content" id="giftContent"></div>
+          <img id="giftImage" class="gift-image hidden" alt="বিশেষ উপহার">
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="voiceSection">
+      <div class="container">
+        <h2 class="section-title">একটু নিজের কণ্ঠে কিছু কথা 🎙️</h2>
+        <p class="section-subtitle">এই অডিওটি তোমার জন্য রেকর্ড করা।</p>
+        <div class="card media-player">
+          <div class="media-icon">🎧</div>
+          <audio id="voiceAudio" controls preload="metadata"></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="videoSection">
+      <div class="container">
+        <h2 class="section-title">একটি বিশেষ ভিডিও 🎬</h2>
+        <p class="section-subtitle">কিছু মুহূর্ত, কিছু স্মৃতি।</p>
+        <div class="card media-player">
+          <video id="birthdayVideo" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="musicSection">
+      <div class="container">
+        <h2 class="section-title">জন্মদিনের গান 🎵</h2>
+        <p class="section-subtitle">এই দিনটা আরও সুন্দর হোক প্রিয় সুরে।</p>
+        <div class="card media-player">
+          <div class="media-icon">🎶</div>
+          <p id="musicTitle" class="gold">তোমার জন্য একটি গান</p>
+          <audio id="birthdayAudio" controls preload="metadata"></audio>
+          <audio id="backgroundAudio" loop preload="metadata"></audio>
+          <div style="margin-top:15px">
+            <button class="btn btn-outline btn-small" id="musicToggle">ব্যাকগ্রাউন্ড মিউজিক চালু করো</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal wish maker -->
+    <section class="section" id="wishSection">
+      <div class="container">
+        <h2 class="section-title">সাগরের জন্য তোর শুভেচ্ছা 💛</h2>
+        <p class="section-subtitle">নিজের মনের কথাগুলো লিখে একটি শুভেচ্ছা তৈরি কর।</p>
+        <div class="card wish-box">
+          <textarea id="wishInput" maxlength="400" placeholder="এখানে তোর মনের কথাগুলো লিখ..."></textarea>
+          <button class="btn" id="makeWishBtn">শুভেচ্ছা তৈরি কর ✨</button>
+          <div class="wish-result" id="wishResult"></div>
+          <button class="btn btn-outline btn-small hidden" id="copyWishBtn">লেখাটি কপি করো</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="finalSection">
+      <div class="container">
+        <div class="celebration-banner">
+          <div class="big-emoji">🌟💛🌙</div>
+          <h2 id="finalTitle">শুভ জন্মদিন, সাগর!</h2>
+          <p id="finalMessage" class="muted">
+            জীবনের প্রতিটি নতুন সকাল তোর জন্য বয়ে আনুক নতুন সম্ভাবনা।
+            ভালো থেকো, হাসিখুশি থেকো, নিজের স্বপ্নগুলো পূরণ করো।
+          </p><br>
+          <button class="btn" onclick="launchFireworks()">আরেকবার উদ্‌যাপন করি! 🎆</button>
+          <button class="btn btn-outline" id="surpriseBtn">আরেকটি সারপ্রাইজ! 🎁</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>তোর জন্য ভালোবাসা ও শুভকামনায় তৈরি 💛</p>
+    <p style="margin-top:8px">Made with <span>♥</span> for <span id="footerName">সাগর</span></p>
+  </footer>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="ছবি বড় করে দেখুন">
+  <button class="lightbox-close" id="lightboxClose" aria-label="বন্ধ করুন">×</button>
+  <img id="lightboxImage" alt="বড় ছবি">
+</div>
+
+<!-- Surprise -->
+<div class="modal" id="surpriseModal" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div class="modal-emoji">🌙💛✨</div>
+    <h2>একটা কথা মনে রাখিস, সাগর!</h2>
+    <p class="muted" style="line-height:2">
+      জীবনে যত বাধাই আসুক, নিজের ওপর বিশ্বাস হারাবি না।
+      তোর সামনে আরও অনেক সুন্দর দিন অপেক্ষা করছে।
+      তুই ভালো থাকিস, হাসিখুশি থাকিস। ❤️
+    </p>
+    <br>
+    <button class="btn" id="closeSurprise">ধন্যবাদ! 💛</button>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIGURATION ================= */
+const CONFIG = {
+  friendName: "ফয়সাল মাহমুদ সাগর",
+  birthday: "2026-11-26",
+
+  sections: {
+    countdown:true, celebration:true, cake:true, gallery:true,
+    letter:true, reasons:true, quiz:true, gift:true,
+    voice:true, video:true, music:true, finalCelebration:true
+  },
+
+  content: {
+    heroPhoto: "image/WhatsApp Image 2026-11-24 at 8.17.42 PM.jpeg",
+
+    friendshipPhotos: [
+      {src:"image/WhatsApp Image 2026-11-24 at 8.18.13 PM.jpeg",caption:"আমাদের স্মৃতি"},
+      {src:"image/WhatsApp Image 2026-11-24 at 8.17.51 PM (1).jpeg",caption:"একসঙ্গে কাটানো সময়"},
+      {src:"image/WhatsApp Image 2026-11-24 at 8.17.42 PM.jpeg",caption:"স্মৃতির ছবি"},
+      {src:"image/WhatsApp Image 2026-11-24 at 8.17.44 PM.jpeg",caption:"স্মৃতির মুহূর্ত"},
+      {src:"image/WhatsApp Image 2026-11-24 at 8.17.43 PM.jpeg",caption:"বন্ধুত্বের ছবি"},
+      {src:"image/WhatsApp Image 2026-11-24 at 8.17.41 PM (1).jpeg",caption:"স্মৃতির ছবি"}
+    ],
+
+    birthdayMusic:"",
+    backgroundMusic:"",
+    voiceMessage:"",
+    birthdayVideo:"",
+
+    letter:`প্রিয় সাগর,
+
+শুভ জন্মদিন, বন্ধু! ❤️
+
+জীবনে অনেক মানুষের সঙ্গে পরিচয় হয়, কিন্তু সবাই মনের কাছের মানুষ হয়ে উঠতে পারে না। তুই তাদের মধ্যে একজন, যাকে বন্ধু হিসেবে পাওয়া সত্যিই অনেক বড় ব্যাপার।
+
+তোর জীবনের প্রতিটি দিন সুন্দর হোক। তোর সব স্বপ্ন পূরণ হোক। জীবনের কঠিন সময়গুলো সহজ হয়ে যাক, আর হাসির মুহূর্তগুলো আরও দীর্ঘ হোক।
+
+যেখানেই থাকিস, ভালো থাকিস। নিজের মতো করে জীবনটাকে উপভোগ করিস। আমাদের বন্ধুত্ব যেন সবসময় এমনই থাকে।
+
+অনেক অনেক শুভকামনা ও ভালোবাসা রইল।
+
+শুভ জন্মদিন, বন্ধু! 🎂💛`,
+
+    reasons:[
+      "তোর সঙ্গে কথা বললে মন ভালো হয়ে যায়।",
+      "তুই কঠিন সময়েও পাশে থাকার চেষ্টা করিস।",
+      "তোর হাসিটা আশপাশের পরিবেশ সুন্দর করে দেয়।",
+      "তুই নিজের মতো, আর সেটাই তোর বিশেষত্ব।",
+      "তোর সঙ্গে কাটানো মুহূর্তগুলো মনে রাখার মতো।",
+      "তুই একজন গুরুত্বপূর্ণ বন্ধু।"
+    ],
+
+    giftMessage:"বন্ধু, তোর জন্য আমার উপহার হলো অনেক অনেক শুভকামনা। তোর জীবনে সুখ, শান্তি, সুস্বাস্থ্য আর সফলতা আসুক। সবসময় হাসিখুশি থাকিস! 💛",
+    giftImage:"image/WhatsApp Image 2026-11-24 at 8.17.38 PM.jpeg",
+
+    quizQuestions:[
+      {question:"বন্ধুত্বের সবচেয়ে গুরুত্বপূর্ণ বিষয় কোনটি?",options:["বিশ্বাস","টাকা","প্রতিযোগিতা","অহংকার"],answer:0},
+      {question:"জন্মদিনে সবচেয়ে সুন্দর উপহার কী হতে পারে?",options:["দামী জিনিস","ভালোবাসা ও আন্তরিকতা","শুধু কেক","কিছুই না"],answer:1},
+      {question:"একজন ভালো বন্ধু কী করে?",options:["বিপদে দূরে থাকে","শুধু নিজের কথা ভাবে","পাশে থাকার চেষ্টা করে","বন্ধুকে ভুলে যায়"],answer:2}
+    ]
+  }
+};
+
+/* ================= HELPERS ================= */
+const $=id=>document.getElementById(id);
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function showToast(message){
+  const toast=$('toast');
+  toast.textContent=message;
+  toast.classList.add('show');
+  clearTimeout(showToast.timer);
+  showToast.timer=setTimeout(()=>toast.classList.remove('show'),2600);
+}
+function setSectionVisible(id,visible){
+  const el=$(id);
+  if(el)el.classList.toggle('hidden',!visible);
+}
+function setMediaSource(element,src){
+  if(!element||!src)return false;
+  element.src=src;
+  return true;
+}
+function toggleNav(key,visible){
+  const link=document.querySelector(`[data-nav="${key}"]`);
+  if(link)link.classList.toggle('hidden',!visible);
+}
+
+/* ================= STARS & PARTICLES ================= */
+function createStars(){
+  const field=$('starfield');
+  for(let i=0;i<100;i++){
+    const star=document.createElement('span');
+    star.className='star';
+    star.style.left=Math.random()*100+'%';
+    star.style.top=Math.random()*100+'%';
+    star.style.animationDelay=Math.random()*4+'s';
+    star.style.opacity=(Math.random()*.6+.15).toString();
+    field.appendChild(star);
+  }
+}
+function createFloatingParticle(){
+  if(reducedMotion||document.hidden)return;
+  const p=document.createElement('span');
+  p.className='floating-particle';
+  p.textContent=['✦','✧','·','✨','⋆'][Math.floor(Math.random()*5)];
+  p.style.left=Math.random()*100+'vw';
+  p.style.fontSize=(10+Math.random()*17)+'px';
+  const duration=7+Math.random()*8;
+  p.style.animationDuration=duration+'s';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),duration*1000);
+}
+createStars();
+if(!reducedMotion)setInterval(createFloatingParticle,900);
+
+/* ================= SCROLL PROGRESS & REVEAL ================= */
+function updateScrollProgress(){
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const value=max>0?(window.scrollY/max)*100:0;
+  $('scrollProgress').style.width=value+'%';
+}
+window.addEventListener('scroll',updateScrollProgress,{passive:true});
+window.addEventListener('resize',updateScrollProgress);
+
+let revealObserver=null;
+function setupReveal(){
+  if(reducedMotion)return;
+  if(!('IntersectionObserver'in window))return;
+  if(!revealObserver){
+    revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:.08});
+  }
+  document.querySelectorAll('#mainExperience .section:not(.hidden),#mainExperience .celebration-banner,#mainExperience .card').forEach(el=>{
+    if(!el.classList.contains('reveal')&&!el.classList.contains('visible')){
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    }
+  });
+}
+const sectionObserver=new MutationObserver(()=>setupReveal());
+sectionObserver.observe($('mainExperience'),{subtree:true,attributes:true,attributeFilter:['class']});
+
+/* ================= COUNTDOWN ================= */
+let birthdayStarted=false;
+let countdownTimer=null;
+
+function getBirthdayTimestamp(){
+  return new Date(CONFIG.birthday+'T00:00:00+06:00').getTime();
+}
+function isBirthdayOrLater(){return Date.now()>=getBirthdayTimestamp()}
+
+function updateCountdown(){
+  const difference=getBirthdayTimestamp()-Date.now();
+  if(difference<=0){
+    ['days','hours','minutes','seconds'].forEach(id=>$(id).textContent='00');
+    $('countdownNote').textContent='আজ তোর জন্মদিন! শুভ জন্মদিন! 🎉';
+    if(!birthdayStarted)startBirthdayCelebration();
+    return;
+  }
+  const seconds=Math.floor(difference/1000);
+  $('days').textContent=String(Math.floor(seconds/86400)).padStart(2,'0');
+  $('hours').textContent=String(Math.floor((seconds%86400)/3600)).padStart(2,'0');
+  $('minutes').textContent=String(Math.floor((seconds%3600)/60)).padStart(2,'0');
+  $('seconds').textContent=String(seconds%60).padStart(2,'0');
+}
+function startBirthdayCelebration(){
+  if(birthdayStarted)return;
+  birthdayStarted=true;
+  if(CONFIG.sections.celebration)setSectionVisible('celebration',true);
+  if(CONFIG.sections.finalCelebration)setSectionVisible('finalSection',true);
+  setupReveal();
+  launchFireworks();
+  showToast('শুভ জন্মদিন, সাগর! 🎂🎉');
+}
+
+/* ================= FIREWORKS ================= */
+const canvas=$('fxCanvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+let animationRunning=false;
+
+function resizeCanvas(){
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  canvas.width=innerWidth*dpr;
+  canvas.height=innerHeight*dpr;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+window.addEventListener('resize',resizeCanvas);
+resizeCanvas();
+
+function burst(x,y,count=55){
+  for(let i=0;i<count;i++){
+    const angle=Math.random()*Math.PI*2;
+    const speed=1.5+Math.random()*5;
+    particles.push({
+      x,y,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed,
+      life:55+Math.random()*35,size:1.5+Math.random()*3,
+      color:['#f5cf78','#ffffff','#e8a5c7','#a98bea','#ffad73'][Math.floor(Math.random()*5)]
+    });
+  }
+  if(!animationRunning)animateParticles();
+}
+function launchFireworks(){
+  const w=innerWidth,h=innerHeight;
+  for(let i=0;i<5;i++){
+    setTimeout(()=>burst(w*(.15+Math.random()*.7),h*(.15+Math.random()*.45),65),i*250);
+  }
+}
+function animateParticles(){
+  animationRunning=true;
+  ctx.clearRect(0,0,innerWidth,innerHeight);
+  particles=particles.filter(p=>p.life>0);
+  particles.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;p.vy+=.045;p.vx*=.99;p.life--;
+    ctx.globalAlpha=Math.max(0,p.life/70);
+    ctx.fillStyle=p.color;ctx.beginPath();
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
+  });
+  ctx.globalAlpha=1;
+  if(particles.length)requestAnimationFrame(animateParticles);
+  else{animationRunning=false;ctx.clearRect(0,0,innerWidth,innerHeight)}
+}
+
+/* ================= CAKE ================= */
+$('blowBtn').addEventListener('click',()=>{
+  $('cake').classList.add('blown');
+  $('cakeMessage').textContent='ইয়েই! তোর সব ইচ্ছা পূরণ হোক! 🎉';
+  $('blowBtn').classList.add('hidden');
+  $('relightBtn').classList.remove('hidden');
+  burst(innerWidth/2,innerHeight*.48,65);
+});
+$('relightBtn').addEventListener('click',()=>{
+  $('cake').classList.remove('blown');
+  $('cakeMessage').textContent='আবার একটা ইচ্ছা কর! 💛';
+  $('blowBtn').classList.remove('hidden');
+  $('relightBtn').classList.add('hidden');
+});
+
+/* ================= GALLERY ================= */
+let galleryImages=[];
+let slideshowTimer=null;
+let slideshowIndex=0;
+
+function openLightbox(src){
+  $('lightboxImage').src=src;
+  $('lightbox').classList.add('show');
+}
+function closeLightbox(){
+  $('lightbox').classList.remove('show');
+  $('lightboxImage').src='';
+}
+$('lightboxClose').addEventListener('click',closeLightbox);
+$('lightbox').addEventListener('click',e=>{
+  if(e.target===$('lightbox'))closeLightbox();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    closeLightbox();
+    $('surpriseModal').classList.remove('show');
+  }
+});
+
+function addGalleryItem(photo,index){
+  return new Promise(resolve=>{
+    const img=new Image();
+    img.onload=()=>{
+      const item=document.createElement('div');
+      item.className='gallery-item fade-in';
+      const display=document.createElement('img');
+      display.src=photo.src;
+      display.alt=photo.caption||'স্মৃতির ছবি';
+      display.loading='lazy';
+      const caption=document.createElement('div');
+      caption.className='gallery-caption';
+      caption.textContent=photo.caption||('স্মৃতি '+(index+1));
+      item.append(display,caption);
+      item.addEventListener('click',()=>openLightbox(photo.src));
+      $('galleryGrid').appendChild(item);
+      galleryImages.push({src:photo.src,item});
+      resolve(true);
+    };
+    img.onerror=()=>{console.warn('ছবি পাওয়া যায়নি:',photo.src);resolve(false)};
+    img.src=photo.src;
+  });
+}
+async function buildGallery(){
+  const photos=CONFIG.content.friendshipPhotos||[];
+  if(!CONFIG.sections.gallery||!photos.length)return;
+  let loaded=0;
+  for(let i=0;i<photos.length;i++){
+    if(photos[i]?.src&&await addGalleryItem(photos[i],i))loaded++;
+  }
+  setSectionVisible('gallerySection',loaded>0);
+  toggleNav('gallery',loaded>0);
+  setupReveal();
+}
+function stopSlideshow(){
+  clearInterval(slideshowTimer);
+  slideshowTimer=null;
+  galleryImages.forEach(({item})=>item.style.display='');
+  $('slideshowBtn').textContent='▶ স্লাইডশো চালু করো';
+}
+function startSlideshow(){
+  if(galleryImages.length<2){showToast('স্লাইডশোর জন্য অন্তত দুটি ছবি দরকার।');return}
+  stopSlideshow();
+  slideshowIndex=0;
+  const showSlide=()=>{
+    galleryImages.forEach(({item},i)=>item.style.display=i===slideshowIndex?'block':'none');
+    galleryImages[slideshowIndex].item.scrollIntoView({behavior:'smooth',block:'center'});
+    slideshowIndex=(slideshowIndex+1)%galleryImages.length;
+  };
+  showSlide();
+  slideshowTimer=setInterval(showSlide,3000);
+  $('slideshowBtn').textContent='■ স্লাইডশো বন্ধ করো';
+}
+$('slideshowBtn').addEventListener('click',()=>{
+  if(slideshowTimer)stopSlideshow();
+  else startSlideshow();
+});
+
+/* ================= LETTER ================= */
+$('openLetterBtn').addEventListener('click',()=>{
+  $('letterPaper').classList.toggle('open');
+  $('openLetterBtn').textContent=$('letterPaper').classList.contains('open')?'চিঠি বন্ধ কর':'চিঠি খুলে পড়';
+});
+
+/* ================= REASONS ================= */
+function buildReasons(){
+  const reasons=CONFIG.content.reasons||[];
+  if(!CONFIG.sections.reasons||!reasons.length)return;
+  reasons.forEach((reason,index)=>{
+    const card=document.createElement('div');
+    card.className='reason-card fade-in';
+    const number=document.createElement('div');
+    number.className='reason-number';
+    number.textContent='✦ '+String(index+1).padStart(2,'0');
+    const text=document.createElement('p');
+    text.textContent=reason;
+    card.append(number,text);
+    $('reasonsGrid').appendChild(card);
+  });
+  setSectionVisible('reasonsSection',true);
+}
+
+/* ================= GIFT ================= */
+function openGift(){
+  $('giftContent').classList.add('show');
+  $('giftEmoji').textContent='🎉';
+  $('giftContent').textContent=CONFIG.content.giftMessage||'তোর জীবনে সবসময় আনন্দ, শান্তি আর ভালোবাসা থাকুক! 💛';
+  if(CONFIG.content.giftImage){
+    $('giftImage').src=CONFIG.content.giftImage;
+    $('giftImage').onload=()=>$('giftImage').classList.remove('hidden');
+    $('giftImage').onerror=()=>$('giftImage').classList.add('hidden');
+  }
+  burst(innerWidth/2,innerHeight*.55,35);
+}
+$('giftEmoji').addEventListener('click',openGift);
+$('giftEmoji').addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' ')openGift();
+});
+
+/* ================= QUIZ ================= */
+let quizIndex=0,quizScore=0,quizAnswered=false;
+function buildQuiz(){
+  const questions=CONFIG.content.quizQuestions||[];
+  if(!CONFIG.sections.quiz||!questions.length)return;
+  setSectionVisible('quizSection',true);
+  renderQuizQuestion();
+}
+function renderQuizQuestion(){
+  const questions=CONFIG.content.quizQuestions;
+  const q=questions[quizIndex];
+  quizAnswered=false;
+  $('quizProgress').textContent=`প্রশ্ন ${quizIndex+1} / ${questions.length}`;
+  $('quizQuestion').textContent=q.question;
+  $('quizFeedback').textContent='';
+  $('nextQuestionBtn').classList.add('hidden');
+  $('quizResult').classList.add('hidden');
+  $('quizOptions').innerHTML='';
+  q.options.forEach((option,index)=>{
+    const button=document.createElement('button');
+    button.className='quiz-option';
+    button.textContent=option;
+    button.addEventListener('click',()=>{
+      if(quizAnswered)return;
+      quizAnswered=true;
+      const correct=index===q.answer;
+      if(correct){quizScore++;$('quizFeedback').textContent='একদম সঠিক উত্তর! 🎉'}
+      else $('quizFeedback').textContent='উত্তরটা ঠিক হয়নি। সঠিক উত্তর: '+q.options[q.answer];
+      [...$('quizOptions').children].forEach((b,i)=>{
+        b.disabled=true;
+        if(i===q.answer)b.style.borderColor='#a7d9a5';
+      });
+      $('nextQuestionBtn').classList.remove('hidden');
+      $('nextQuestionBtn').textContent=quizIndex===questions.length-1?'ফলাফল দেখো':'পরের প্রশ্ন →';
+    });
+    $('quizOptions').appendChild(button);
+  });
+}
+$('nextQuestionBtn').addEventListener('click',()=>{
+  const questions=CONFIG.content.quizQuestions;
+  quizIndex++;
+  if(quizIndex<questions.length){renderQuizQuestion();return}
+  $('quizQuestion').textContent='কুইজ শেষ! 🥳';
+  $('quizOptions').innerHTML='';
+  $('quizProgress').textContent='তোমার ফলাফল';
+  $('quizFeedback').textContent='';
+  $('nextQuestionBtn').classList.add('hidden');
+  $('quizResult').classList.remove('hidden');
+  $('quizResult').innerHTML='';
+  const result=document.createElement('p');
+  result.style.cssText='font-size:22px;color:var(--gold);margin:15px 0';
+  result.textContent=`তুমি ${questions.length}টির মধ্যে ${quizScore}টি সঠিক উত্তর দিয়েছ!`;
+  $('quizResult').appendChild(result);
+});
+
+/* ================= MUSIC ================= */
+let backgroundPlaying=false;
+$('musicToggle').addEventListener('click',async()=>{
+  const audio=$('backgroundAudio');
+  if(!audio.getAttribute('src'))return;
+  try{
+    if(backgroundPlaying){
+      audio.pause();backgroundPlaying=false;
+      $('musicToggle').textContent='ব্যাকগ্রাউন্ড মিউজিক চালু করো';
+    }else{
+      await audio.play();backgroundPlaying=true;
+      $('musicToggle').textContent='ব্যাকগ্রাউন্ড মিউজিক বন্ধ করো';
+    }
+  }catch(e){showToast('গান চালু করা যায়নি। অডিও ফাইলটি পরীক্ষা করো।')}
+});
+
+/* ================= WISH MAKER ================= */
+$('makeWishBtn').addEventListener('click',()=>{
+  const message=$('wishInput').value.trim();
+  if(!message){showToast('আগে তোর শুভেচ্ছাটা লিখে নে।');return}
+  const result=`শুভ জন্মদিন, ${CONFIG.friendName}! 🎂💛\n\n${message}\n\nঅনেক ভালোবাসা ও শুভকামনা রইল!`;
+  $('wishResult').textContent=result;
+  $('copyWishBtn').classList.remove('hidden');
+});
+$('copyWishBtn').addEventListener('click',async()=>{
+  try{
+    await navigator.clipboard.writeText($('wishResult').textContent);
+    showToast('শুভেচ্ছাটি কপি হয়েছে! 💛');
+  }catch(e){
+    showToast('কপি করা যায়নি। লেখাটি নির্বাচন করে কপি করো।');
+  }
+});
+
+/* ================= SURPRISE ================= */
+$('surpriseBtn').addEventListener('click',()=>{
+  $('surpriseModal').classList.add('show');
+  launchFireworks();
+});
+$('closeSurprise').addEventListener('click',()=>$('surpriseModal').classList.remove('show'));
+$('surpriseModal').addEventListener('click',e=>{
+  if(e.target===$('surpriseModal'))$('surpriseModal').classList.remove('show');
+});
+
+/* ================= ENTER EXPERIENCE ================= */
+let experienceEntered=false;
+function enterExperience(){
+  if(experienceEntered)return;
+  experienceEntered=true;
+  $('welcome').classList.add('hidden');
+  $('mainExperience').classList.remove('hidden');
+  window.scrollTo(0,0);
+
+  if(CONFIG.sections.countdown){
+    setSectionVisible('countdown',true);
+    updateCountdown();
+    countdownTimer=setInterval(updateCountdown,1000);
+  }else setSectionVisible('countdown',false);
+
+  if(CONFIG.sections.cake)setSectionVisible('cakeSection',true);
+  if(CONFIG.sections.letter&&CONFIG.content.letter){
+    $('letterPaper').textContent=CONFIG.content.letter;
+    setSectionVisible('letterSection',true);
+  }
+  if(CONFIG.sections.gallery)buildGallery();
+  buildReasons();
+  buildQuiz();
+
+  if(CONFIG.sections.gift&&(CONFIG.content.giftMessage||CONFIG.content.giftImage)){
+    setSectionVisible('giftSection',true);
+  }
+
+  if(CONFIG.sections.voice&&CONFIG.content.voiceMessage){
+    setMediaSource($('voiceAudio'),CONFIG.content.voiceMessage);
+    setSectionVisible('voiceSection',true);
+  }
+  if(CONFIG.sections.video&&CONFIG.content.birthdayVideo){
+    setMediaSource($('birthdayVideo'),CONFIG.content.birthdayVideo);
+    setSectionVisible('videoSection',true);
+  }
+
+  let hasMusic=false;
+  if(CONFIG.content.birthdayMusic){
+    setMediaSource($('birthdayAudio'),CONFIG.content.birthdayMusic);
+    hasMusic=true;
+  }else $('birthdayAudio').classList.add('hidden');
+
+  if(CONFIG.content.backgroundMusic){
+    setMediaSource($('backgroundAudio'),CONFIG.content.backgroundMusic);
+    hasMusic=true;
+  }else $('musicToggle').classList.add('hidden');
+
+  if(hasMusic&&CONFIG.sections.music)setSectionVisible('musicSection',true);
+
+  if(CONFIG.content.heroPhoto){
+    const hero=$('heroPhoto');
+    hero.src=CONFIG.content.heroPhoto;
+    hero.onload=()=>hero.classList.remove('hidden');
+    hero.onerror=()=>hero.classList.add('hidden');
+    const welcome=$('welcomePhoto');
+    welcome.src=CONFIG.content.heroPhoto;
+    welcome.onload=()=>welcome.classList.remove('hidden');
+    welcome.onerror=()=>welcome.classList.add('hidden');
+  }
+
+  setSectionVisible('finalSection',CONFIG.sections.finalCelebration);
+
+  if(CONFIG.sections.celebration&&isBirthdayOrLater())startBirthdayCelebration();
+  if(!CONFIG.sections.countdown&&CONFIG.sections.celebration&&isBirthdayOrLater())startBirthdayCelebration();
+
+  toggleNav('countdown',CONFIG.sections.countdown);
+  toggleNav('celebration',CONFIG.sections.celebration);
+  toggleNav('cake',CONFIG.sections.cake);
+  toggleNav('letter',!!CONFIG.content.letter&&CONFIG.sections.letter);
+  toggleNav('gift',!!(CONFIG.content.giftMessage||CONFIG.content.giftImage)&&CONFIG.sections.gift);
+  toggleNav('gallery',CONFIG.sections.gallery&&CONFIG.content.friendshipPhotos.length>0);
+
+  $('heroTitle').textContent=`শুভ জন্মদিন, ${CONFIG.friendName}! 🎂`;
+  $('finalTitle').textContent=`শুভ জন্মদিন, ${CONFIG.friendName}!`;
+  $('footerName').textContent=CONFIG.friendName;
+  document.title=`শুভ জন্মদিন, ${CONFIG.friendName}!`;
+  setupReveal();
+  updateScrollProgress();
+}
+$('enterBtn').addEventListener('click',enterExperience);
+
+/* Welcome image */
+if(CONFIG.content.heroPhoto){
+  $('welcomePhoto').src=CONFIG.content.heroPhoto;
+  $('welcomePhoto').onload=()=>$('welcomePhoto').classList.remove('hidden');
+  $('welcomePhoto').onerror=()=>$('welcomePhoto').classList.add('hidden');
+}
+</script>
+</body>
+</html>
